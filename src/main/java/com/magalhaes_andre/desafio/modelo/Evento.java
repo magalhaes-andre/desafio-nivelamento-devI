@@ -2,21 +2,35 @@ package com.magalhaes_andre.desafio.modelo;
 
 import java.util.List;
 
-public class Evento{
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
-    private String nome;
-    private Local localDoEvento;
-    private List<Convidado> convidados;
+@Entity
+public class Evento{
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+    
+	@Column(nullable = false)
+	private String nome;
+	
+	@Column(nullable = false)
+    private String local;
+	
+	@ElementCollection
+	@CollectionTable(name="Convidados", joinColumns=@JoinColumn(name="evento_id"))
+	@Column(name="convidado")
+	private List<String> convidados;
 
     public void setNome(String nome){
         this.nome = nome;
     }
 
-    public void setLocal(Local local){
-        this.localDoEvento = local;
+    public void setLocal(String local){
+        this.local = local;
     }
 
-    public void setConvidados(List<Convidado> convidados){
+    public void setConvidados(List<String> convidados){
         this.convidados = convidados;
     }
 
@@ -24,11 +38,11 @@ public class Evento{
         return this.nome;
     }
 
-    public List<Convidado> getConvidados(){
+    public List<String> getConvidados(){
         return this.convidados;
     }
 
-    public Local getLocal(){
-        return this.localDoEvento;
+    public String getLocal(){
+        return this.local;
     }
 }
