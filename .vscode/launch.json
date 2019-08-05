@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DesafioApplication",
+            "request": "launch",
+            "mainClass": "com.magalhaes_andre.desafio.DesafioApplication",
+            "projectName": "desafio-nivelamento-devI"
+        }
+    ]
+}

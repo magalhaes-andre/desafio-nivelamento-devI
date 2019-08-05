@@ -16,11 +16,9 @@ public class Evento{
 	
 	@Column(nullable = false)
     private String local;
-	
-	@ElementCollection
-	@CollectionTable(name="Convidados", joinColumns=@JoinColumn(name="evento_id"))
-	@Column(name="convidado")
-	private List<String> convidados;
+	@OneToMany
+	@JoinColumn(name = "id_evento")
+	private List<Convidado> convidados;
 
     public void setNome(String nome){
         this.nome = nome;
@@ -30,7 +28,7 @@ public class Evento{
         this.local = local;
     }
 
-    public void setConvidados(List<String> convidados){
+    public void setConvidados(List<Convidado> convidados){
         this.convidados = convidados;
     }
 
@@ -38,7 +36,7 @@ public class Evento{
         return this.nome;
     }
 
-    public List<String> getConvidados(){
+    public List<Convidado> getConvidados(){
         return this.convidados;
     }
 

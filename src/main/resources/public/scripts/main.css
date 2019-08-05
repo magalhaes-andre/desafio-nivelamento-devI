@@ -1,0 +1,11 @@
+#outer{
+    float: left;
+}
+
+#inner{
+    float: left;
+}
+
+.nice-blue {
+    color: blue;
+}

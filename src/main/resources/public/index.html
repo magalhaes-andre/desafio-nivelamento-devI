@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' type='text/css' href='scripts/main.css'>
+    <script src='scripts/main.js'></script>
+    <title>Nivelamento Dev I</title>
+</head>
+<body>
+    <form>
+        <h1>Evento:</h1>
+            <input type = "text" name="evento" id="evento" required></input>
+        
+        <h1>Convidados:</h1>
+            <input type = "text" name="convidado" id="convidado" required></input>
+            <button onclick="preencheLista();" type="button">Adicionar</button>
+            <ul id="lista-convidados"></ul>
+        
+        <h1>Local:</h1>
+            <input type = "text" name="local" id="local" required></input>
+        
+        <button onclick= "gravaEvento();" type="submit">Adicionar Evento</button>
+    </form>
+
+    <table id="eventosRegistrados">
+        <tr>
+            <th>Id</th>
+            <th>Evento</th>
+            <th>Convidados</th>
+            <th>Local</th>
+        </tr>
+    </table>
+</body>
+</html><!DOCTYPE html>
