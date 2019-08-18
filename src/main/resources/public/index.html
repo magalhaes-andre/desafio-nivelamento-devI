@@ -4,22 +4,22 @@
     <meta charset='utf-8'>
     <link rel='stylesheet' type='text/css' href='scripts/main.css'>
     <script src='scripts/main.js'></script>
-    <title>Nivelamento Dev I</title>
+    <title>Guestbook</title>
 </head>
 <body>
     <form>
-        <h1>Evento:</h1>
-            <input type = "text" name="evento" id="evento" required></input>
+        <h1>Event:</h1>
+            <input type = "text" name="event" id="event" required></input>
         
-        <h1>Convidados:</h1>
-            <input type = "text" name="convidado" id="convidado" required></input>
-            <button onclick="preencheLista();" type="button">Adicionar</button>
-            <ul id="lista-convidados"></ul>
+        <h1>Guests:</h1>
+            <input type = "text" name="guest" id="guest" required></input>
+            <button onclick="preencheLista();" type="button">Add</button>
+            <ul id="guest-list"></ul>
         
-        <h1>Local:</h1>
-            <input type = "text" name="local" id="local" required></input>
+        <h1>Place:</h1>
+            <input type = "text" name="place" id="place" required></input>
         
-        <button onclick= "gravaEvento();" type="submit">Adicionar Evento</button>
+        <button onclick= "postEvent();" type="submit">Save Event</button>
     </form>
 
     <table id="eventosRegistrados">
