@@ -11,12 +11,13 @@
         <h1>Event:</h1>
             <input type = "text" name="event" id="event" required></input>
         
-        <h1>Guests:</h1>
+        <h2>Guests:</h2>
             <input type = "text" name="guest" id="guest" required></input>
-            <button onclick="preencheLista();" type="button">Add</button>
-            <ul id="guest-list"></ul>
+            <button onclick="addGuest();" type="button">Add</button>
+            
+            <ul id="guestList"></ul>
         
-        <h1>Place:</h1>
+        <h2>Place:</h2>
             <input type = "text" name="place" id="place" required></input>
         
         <button onclick= "postEvent();" type="submit">Save Event</button>
