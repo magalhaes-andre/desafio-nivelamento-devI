@@ -1,4 +1,4 @@
-package com.magalhaes_andre.desafio.modelo;
+package com.magalhaes_andre.guestbook.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,14 +7,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Convidado {
+public class Guest {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@Column(nullable = false)
-	private String nome;
+	private String name;
 	
-	public String getNome() {
-		return this.nome;
+	public String getName() {
+		return this.name;
 	}
 }
